@@ -13,14 +13,11 @@ import cucumber.api.testng.TestNGCucumberRunner;
         features = "src/main/java/Features",
         glue = {"stepDefinitions"},dryRun=false,
         tags = {"~@Ignore"},
-        format = {
-                "pretty",
-                "html:target/cucumber-reports/cucumber-pretty",
-                "json:target/cucumber-reports/CucumberTestReport.json",
-                "rerun:target/cucumber-reports/rerun.txt",
-                "json:target/cucumber-reports/CucumberTestReport.json"
-        },plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html",
-        		"json:target/CucumberTestReport.json"})
+    
+       plugin = {"html:target/cucumber-htmlreport",
+    		   "json:target/CucumberTestReport.json",
+    		   "com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html"
+        		 })
 
 public class TestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
