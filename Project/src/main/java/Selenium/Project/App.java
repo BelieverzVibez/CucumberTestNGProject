@@ -26,7 +26,7 @@ public class App
 		
 		WebElement g=driver.findElement(By.xpath("//*[@class='gLFyf gsfi']"));
 		Action typeInCAPS = sd.keyDown(g, Keys.SHIFT).sendKeys(g, "ART").keyUp(g, Keys.SHIFT).build();
-	 
+	 System.out.println("sucess");
 	//Performing the typeInCAPS action
 	typeInCAPS.perform();
 	
