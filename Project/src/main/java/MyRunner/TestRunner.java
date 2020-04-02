@@ -19,7 +19,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt",
                 "json:target/cucumber-reports/CucumberTestReport.json"
-        },plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html")
+        },plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html",
+        		"json:target/CucumberTestReport.json"})
 
 public class TestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
